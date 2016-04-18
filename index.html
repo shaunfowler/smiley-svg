@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="SmileySample">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smiley SVG Example</title>
+</head>
+
+<body ng-controller="SampleController">
+
+    <!-- Wrap the directive in a size-constrained container to scale it -->
+    <div style="width: 400px;">
+        <!-- The `smiley` directive -->
+        <smiley percent="percent"></smiley>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="src/smiley-svg.js"></script>
+
+    <script>
+        angular.module('SmileySample', ["SmileySvg"])
+            .controller('SampleController', ['$interval', '$scope',
+                function ($interval, $scope) {
+
+                    // Start at a neutral mood and increase to a smile
+                    $scope.percent = 0;
+                    var increasing = true;
+
+                    $interval(function () {
+                        // Increase or decrease the "happy" percentage
+                        if (increasing) {
+                            $scope.percent++;
+                        } else {
+                            $scope.percent--;
+                        }
+
+                        // Once we've reached the % threshold, reverse the transition
+                        if ($scope.percent === 100) {
+                            increasing = false;
+                        } else if ($scope.percent === -100) {
+                            increasing = true;
+                        }
+                    }, 50);
+                }]);
+    </script>
+
+</body>
+
+</html>

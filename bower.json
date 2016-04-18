@@ -1,0 +1,24 @@
+{
+  "name": "smiley-svf",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Shaun Fowler <shaun.fowler@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.4"
+  }
+}
