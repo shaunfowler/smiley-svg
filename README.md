@@ -2,9 +2,13 @@
 An Angular component that renders a smiley face in SVG. The components `percentage` parameter determines how happy or sad the face appears.
 
 
-## Dependencies
+## Demonstration
 
 `npm install && bower install`
+
+`node app.js`
+
+Visit `http://localhost:3001/`
 
 ## Usage
 
