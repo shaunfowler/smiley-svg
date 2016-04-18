@@ -17,3 +17,7 @@ Add to one of your templates:
 `<smiley percentage="50"></smiley>`
 
 Note: `percentage` can range from `-100` to `+100`
+
+## Screenshots
+
+![Happy Face](img/happy.png) ![Sad Face](img/sad.png)
